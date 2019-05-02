@@ -1,0 +1,2 @@
+class Prov < ApplicationRecord
+end

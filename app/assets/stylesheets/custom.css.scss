@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar {
+  background: #7952B3;
+}
+
+.navbar-brand{
+  color: white;
+}
+
+.rowz {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -200px;
+    margin-left: -200px;
+}
+.main-title {
+    margin: 30px 0 40px;
+    padding: 0 20px;
+    font-size: 1.16em;
+    border-bottom: 1px solid #d3d3d3;
+    width: 94%;
+    margin-left: 2.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.logo-slider {
+  background: white;
+  -webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+          box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.logo-slider::before, .logo-slider::after {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.logo-slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.logo-slider::before {
+  left: 0;
+  top: 0;
+}
+.logo-slider .logo-slide-track {
+  -webkit-animation: logo-scroll 40s linear infinite;
+          animation: logo-scroll 40s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(250px * 14);
+}
+.logo-slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+@-webkit-keyframes logo-scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes logo-scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}

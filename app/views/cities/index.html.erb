@@ -1,0 +1,40 @@
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col order-last">
+      First, but last
+    </div>
+    <div class="col">
+      <p id="notice"><%= notice %></p>
+      <tbody>
+        <table>
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+        <% @cities.each do |city| %>
+          <tr>
+            <td><%= city.city_name %></td>
+
+             <td><%=h city.country.country_name %></td>
+            <td><%= link_to 'Show', city %></td>
+            <td><%= link_to 'Edit', edit_city_path(city) %></td>
+            <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New City', new_city_path %>
+    </div>
+    <div class="col order-first">
+      Third, but first
+    </div>
+  </div>
+</div>

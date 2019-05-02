@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col order-last">
+      First, but last
+    </div>
+    <div class="col">
+      <p>
+        <strong>Product Name:</strong>
+        <%= @city.city_name %>
+      </p>
+
+      <p>
+        <strong>Url</strong>
+      <td><%= @city.url %></td>
+      </p>
+      <p>
+      <strong>Description</strong>
+    <td><%= @city.description %></td>
+    </p>
+
+      <p>
+        <strong>Category:</strong>
+        <%= @city.country.country_name %>
+      </p>
+
+
+    </div>
+    <div class="col order-first">
+      Third, but first
+    </div>
+  </div>
+</div>
